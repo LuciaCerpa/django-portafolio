@@ -1,0 +1,7 @@
+media
+
+**/__pycache__
+__pycache__
+.envLucy
+
+db.sqlite3
