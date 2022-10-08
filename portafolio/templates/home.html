@@ -3,18 +3,18 @@
 {% block content %}
 
 {% load static %}
-<header class="row bg-black">
-    <div class="col-md-4">
-        <img src="{% static 'portafolio/nombre.png' %}" alt="image">
+<header class="row">
+    <div class="d-flex justify-content-start col-lg-6 col-md-7 col-sm-12 me-container">
+        <img class="me" src="{% static 'portafolio/lucy.png' %}" alt="image">
     </div>
-    <div class="col-d-8 my-auto">
+    <div class="col-lg-6 col-md-5 col-sm-12 my-auto">
         <h1>I am <strong>Lucia Cerpa</strong></h1>
-        <h3>I am a Python Fullstack Developer</h3>
+        <h3><span style="color: rgb(38, 223, 230);">Pyt</span><span style="color: yellow;">hon</span> Developer </h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolore voluptate illo dicta praesentium,
             provident iusto odit, velit recusandae, iure tenetur porro quia at repellat ullam. Animi sint beatae
             assumenda?</p>
         <a href="{% static 'portafolio/curriculum.pdf' %}" class='btn btn-primary btn-lg rounded-0 my-3'
-            target="_blank">Dowload Resume</a>
+            target="_blank">Dowload Resume</a>            
     </div>
 
 </header>
@@ -25,22 +25,24 @@
         similique repellendus laudantium nulla repudiandae ullam necessitatibus quasi odit reprehenderit, voluptatem
         dignissimos earum magnam impedit repellat.</p>
 </div>
-
+<div class="d-flex flex-wrap">
 {% for project in projects %}
-
-<div class="col-md-4 p-4">
-    <div class="card bg-black card-project">
-        <div class="card-body">
+    <div class="m-1 card bg-dark card-project col-sm-12 col-md-5 col-lg-5 col-xl-3">
+        <div class="d-flex flex-column justify-content-between card-body" style="cursor:auto;">
+            <div>
             <h2>{{project.title}}</h2>
             <p>{{project.description}}</p>
-            <img src="{{project.image.url}}" alt="{{project.title}}" clas="card-img-top"/>
+            <img class="img-fluid" src="{{project.image.url}}" alt="{{project.title}}" clas="card-img-top"/>
             {% if project.url %}
-            <a href="{{project.url}}" class="btn btn-light rounded-1 btn-sm" target="_blank">{{project.url}}</a>
-
+        </div>
+            <a href="{{project.url}}" class="justify-content-end btn btn-danger rounded-1 btn-sm" target="_blank">{{project.url}}</a>
+        
             {% endif %}
         </div>
     </div>
+
+
+
+{% endfor %} 
 </div>
-
-
-{% endfor %} {% endblock %}
+{% endblock %}
