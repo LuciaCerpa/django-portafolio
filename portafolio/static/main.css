@@ -1,7 +1,19 @@
 .bg-black{
-    background: #090909;
-    color: #fff;
+    background: #090909;    
+    color: rgb(10, 190, 190);
 } 
+
+p{
+    text-align: justify;
+}
+
+h1{
+    color:rgb(240, 184, 240)
+}
+
+h3{
+    color: rgb(8, 243, 79);
+}
 
 .card-project:hover{
     border: 1px solid #fff;
@@ -16,29 +28,44 @@
     cursor: pointer;
 }
 
+.home{
+    background-image: url('./portafolio/homeFondo.png');
+    background-repeat: no-repeat;
+    background-position: right;    
+    background-size: 4rem;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-around;
+}
+
 .me-container{
     border-radius: 50%;    
-    animation: animate 5s infinite alternate;
+    animation: animate 15s infinite alternate; 
+    width: 300px;
+    height: 300px;
+    margin-bottom: 3rem;
 }
 
 @keyframes animate
 {    
-    0%{
+    0%{   
         transform: rotateY(0deg);        
-    }100%{
-        transform: rotateY(-180deg);
-        box-shadow: 0 0 35px #1e9bff;
-        background-image: url('./portafolio/python8.png');
+        background-image: url('./portafolio/lucy.png');
         background-position: center;
         background-repeat: no-repeat;        
-        background-size: 450px;
+        background-size: 200px;         
+    }100%{
+        transform: rotateY(180deg);
+        box-shadow: 0 0 35px #1e9bff;
+        background-image: url('./portafolio/pythonFinal.png');
+        background-position: center;
+        background-repeat: no-repeat;        
+        background-size: cover;         
     }       
     
-}
-
-.me{    
-    height: 80%;
-    margin: auto;
 }
 
 .posts{

@@ -2,17 +2,19 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="/"><img class="shadow" style="width: 18rem;" src="../../static/portafolio/firma.png" alt="firma"/></a>
+      <a class="navbar-brand home" href="/">
+        <img class="shadow " style="width: 18rem;" src="../../static/portafolio/firma.png" alt="firma"/>
+        </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto ">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active text-light card-project" aria-current="page" href="{% url 'blog:posts'%}">Descriptions</a>
+            <a class="nav-link card-project m-2 bg-black" aria-current="page" href="{% url 'blog:posts'%}">Projects Descriptions</a>
           </li>
           <li class="nav-item d-flex align-items-center">
-            <a class="btn btn-primary btn-sm" href="{% static 'portafolio/curriculum.pdf'%}" target="_blank">Download CV</a>
+            <a class="btn btn-primary btn-sm" href="{% static 'portafolio/Resume-Lucia-Cerpa-Python-Developer.pdf'%}" target="_blank">Download CV</a>
           </li>
         </ul>
       </div>

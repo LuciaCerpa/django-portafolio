@@ -4,26 +4,23 @@
 
 {% load static %}
 <header class="row">
-    <div class="d-flex justify-content-start col-lg-6 col-md-7 col-sm-12 me-container">
-        <img class="me" src="{% static 'portafolio/lucy.png' %}" alt="image">
+    <div class="col-lg-7 col-md-7 col-sm-12 me-container">
+        <!-- <img class="me img-fluid rounded-circle" src="{% static 'portafolio/pythonName.jpg' %}" alt="image"> -->
     </div>
-    <div class="col-lg-6 col-md-5 col-sm-12 my-auto">
+    <div class="col-lg-6 col-md-5 col-sm-12 my-auto me-info">
         <h1>I am <strong>Lucia Cerpa</strong></h1>
         <h3><span style="color: rgb(38, 223, 230);">Pyt</span><span style="color: yellow;">hon</span> Developer </h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolore voluptate illo dicta praesentium,
-            provident iusto odit, velit recusandae, iure tenetur porro quia at repellat ullam. Animi sint beatae
-            assumenda?</p>
-        <a href="{% static 'portafolio/curriculum.pdf' %}" class='btn btn-primary btn-lg rounded-0 my-3'
+        <p>Enthusiastic with the idea of being part of a company in which I can use my knowledge to contribute solutions to the present need or problem that may arise, willing to learn new technologies and grow as a developer</p>
+        <a href="{% static 'portafolio/Resume-Lucia-Cerpa-Python-Developer.pdf' %}" class='btn btn-secondary btn-lg rounded-0 my-3 rounded-5'
             target="_blank">Dowload Resume</a>            
     </div>
 
 </header>
 
 <div class="row my-4 text-center">
-    <h3>My Projects</h3>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis neque possimus dolores accusantium blanditiis
-        similique repellendus laudantium nulla repudiandae ullam necessitatibus quasi odit reprehenderit, voluptatem
-        dignissimos earum magnam impedit repellat.</p>
+    <h3>My Projects</h3><a class=" card-project m-2 bg-black" aria-current="page" href="{% url 'blog:posts'%}">Projects Descriptions</a>
+    <p class="text-center">A taste of some of the projects I have developed.
+        Here are the links to experience the application deployment</p>
 </div>
 <div class="d-flex flex-wrap">
 {% for project in projects %}
